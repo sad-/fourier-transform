@@ -27,7 +27,7 @@ def valid(inp, base):
 
 def fourier(inp, base):
     decimal = convert_to_decimal(inp, base)
-    numbers = [convert_from_decimal(decimal, x) for x in xrange(5, 10)]
+    numbers = [convert_from_decimal(decimal, x) for x in xrange(5, 10)] + [str(decimal)]
     counts = [number.count('4') for number in numbers]
     return (argmax(counts), numbers[argmax(counts)])
 
